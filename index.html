@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#fbf5e8">
+<meta name="description" content="Join us for our wedding on Sunday, 15 November 2026. Muhoortham 10:15 – 10:55 AM at PCR Bank Auditorium, Dharmashala, Kannur.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vishnu13pv.github.io/neenu-vishnu-wedding/">
+<meta property="og:title" content="Neenu &amp; Vishnu — Wedding Invitation">
+<meta property="og:description" content="Sunday, 15 November 2026 · Muhoortham 10:15 – 10:55 AM · PCR Bank Auditorium, Dharmashala, Kannur. Your blessings mean the world to us.">
+<meta property="og:image" content="https://vishnu13pv.github.io/neenu-vishnu-wedding/preview.png">
+<meta property="og:image:secure_url" content="https://vishnu13pv.github.io/neenu-vishnu-wedding/preview.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A lit nilavilakku with the names Neenu and Vishnu">
+<meta name="twitter:card" content="summary_large_image">
+<title>Neenu & Vishnu — Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Noto+Serif+Malayalam:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --kasavu:#fbf5e8;
+  --kasavu-deep:#f4ead2;
+  --gold:#b8892f;
+  --gold-soft:#d9b56a;
+  --maroon:#7a1f2b;
+  --maroon-soft:#9b3a44;
+  --leaf:#3f6b3a;
+  --ink:#3b2a22;
+  --muted:#8a6f5c;
+  --flame:#f2a33a;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:'Cormorant Garamond',Georgia,serif;background:#efe3c9;color:var(--ink);font-variant-numeric:lining-nums}
+html{scroll-behavior:smooth;scroll-snap-type:y mandatory}
+body{overflow-x:hidden}
+.ml{font-family:'Noto Serif Malayalam',serif}
+
+/* ---------- pages (same book mechanics as the engagement invite) ---------- */
+.page{
+  position:relative;min-height:100svh;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  scroll-snap-align:start;scroll-snap-stop:always;
+  background:
+    radial-gradient(ellipse at 50% 35%,rgba(255,255,255,.75),transparent 60%),
+    var(--kasavu);
+  opacity:.72;transform:translateY(35px) scale(.985);
+  transition:opacity .75s ease,transform .9s cubic-bezier(.22,1,.36,1);
+}
+.page.active{opacity:1;transform:none}
+.page:not(.active) .page-inner{transform:translateY(18px);opacity:.7}
+.page.active .page-inner{transform:none;opacity:1;transition:transform .8s cubic-bezier(.22,1,.36,1) .08s,opacity .7s ease .08s}
+
+/* Kasavu saree border: a gold band with a thin maroon line inside */
+.page::before{
+  content:"";position:absolute;inset:10px;pointer-events:none;z-index:1;
+  border:3px solid var(--gold-soft);
+  box-shadow:inset 0 0 0 5px var(--kasavu),inset 0 0 0 6px var(--maroon-soft),inset 0 0 0 9px var(--kasavu),inset 0 0 0 10px rgba(184,137,47,.5);
+}
+/* Kasavu hem at the bottom of each page */
+.page::after{
+  content:"";position:absolute;left:10px;right:10px;bottom:10px;height:16px;pointer-events:none;z-index:1;
+  background:
+    repeating-linear-gradient(90deg,transparent 0 10px,rgba(122,31,43,.55) 10px 12px,transparent 12px 22px),
+    linear-gradient(180deg,var(--gold-soft),#e9cd8b 50%,var(--gold-soft));
+  opacity:.85;
+}
+
+.page-inner{width:min(92%,520px);min-height:100svh;padding:60px 24px 80px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;z-index:2}
+.kicker{font-family:Arial,sans-serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.ml-kicker{font-size:20px;color:var(--maroon);margin-bottom:6px;letter-spacing:1px}
+.names{font-family:'Great Vibes',cursive;font-size:clamp(58px,16vw,96px);line-height:.95;color:var(--maroon);font-weight:400;text-shadow:0 3px 10px rgba(122,31,43,.12)}
+.amp{font-size:30px;color:var(--gold);margin:8px 0;font-style:italic}
+.small{font-size:19px;line-height:1.55}
+.ornament{color:var(--gold);font-size:20px;letter-spacing:8px;margin:16px 0}
+.footer{position:absolute;bottom:38px;left:0;right:0;z-index:2;font:11px Arial,sans-serif;letter-spacing:2px;color:var(--muted);text-transform:uppercase}
+
+.title{font-size:clamp(36px,10vw,56px);color:var(--maroon);font-weight:500;line-height:1.1}
+.text{font-size:20px;line-height:1.65;max-width:430px}
+
+/* ---------- jasmine strings (mullappoo) hanging from the top ---------- */
+.jasmine{position:absolute;top:10px;left:10px;right:10px;height:150px;pointer-events:none;z-index:1}
+.jasmine svg{width:100%;height:100%;overflow:visible}
+.jasmine .strand{transform-origin:top center;animation:sway 5s ease-in-out infinite}
+.jasmine .strand:nth-child(2n){animation-delay:-1.6s;animation-duration:6s}
+.jasmine .strand:nth-child(3n){animation-delay:-3.1s}
+@keyframes sway{0%,100%{transform:rotate(-1.6deg)}50%{transform:rotate(1.6deg)}}
+
+/* ---------- nilavilakku ---------- */
+.lamp{width:120px;height:auto;display:block;margin:0 auto 4px;overflow:visible}
+#nilavilakku .brass{fill:url(#brass);stroke:#8c6420;stroke-width:1.2}
+#nilavilakku .flame{transform-box:fill-box;transform-origin:50% 100%;animation:flicker 1.6s ease-in-out infinite}
+#nilavilakku .flame:nth-of-type(2){animation-delay:-.4s}#nilavilakku .flame:nth-of-type(3){animation-delay:-.9s}#nilavilakku .flame:nth-of-type(4){animation-delay:-1.2s}
+#nilavilakku .glow{animation:glow 2.4s ease-in-out infinite}
+@keyframes flicker{0%,100%{transform:scale(1,1) rotate(0)}25%{transform:scale(.92,1.08) rotate(-3deg)}55%{transform:scale(1.05,.93) rotate(2deg)}80%{transform:scale(.97,1.04) rotate(-1deg)}}
+@keyframes glow{50%{opacity:.55}}
+
+/* ---------- couple ---------- */
+.person-name{font-family:'Great Vibes',cursive;font-size:clamp(46px,12vw,62px);color:var(--maroon);line-height:1.05}
+.person-parents{font-style:italic;font-size:19px;color:var(--muted);margin-top:2px}
+.garland{width:200px;height:auto;margin:4px auto 0;display:block;overflow:visible}
+.garland .draw{fill:none;stroke-linecap:round;stroke-dasharray:420;stroke-dashoffset:420}
+.page.active .garland .draw{animation:sketchDraw 2.4s ease forwards}
+
+/* ---------- muhoortham ---------- */
+.day{font-family:Arial,sans-serif;font-size:12px;letter-spacing:5px;text-transform:uppercase;color:var(--muted)}
+.date{font-size:clamp(80px,24vw,120px);color:var(--maroon);line-height:.95;font-weight:500}
+.date-sub{font-family:Arial,sans-serif;font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin:6px 0 18px}
+.muhoortham{display:inline-flex;flex-direction:column;align-items:center;padding:12px 26px;margin-bottom:22px;border:1px solid var(--gold-soft);border-radius:999px;background:rgba(255,255,255,.6)}
+.muhoortham .ml{font-size:14px;color:var(--maroon)}
+.muhoortham b{font-size:24px;font-weight:600;color:var(--maroon);letter-spacing:1px}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;width:100%;max-width:430px}
+.timebox{background:#fff;border-radius:14px;padding:14px 5px;box-shadow:0 8px 25px rgba(90,60,20,.08);border:1px solid #efdcb4;border-top:3px solid var(--gold-soft)}
+.num{font-size:30px;font-weight:600;color:var(--maroon)}
+.label{font-family:Arial,sans-serif;font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-top:4px}
+
+/* ---------- rituals ---------- */
+.rituals{list-style:none;margin:6px 0 0;padding:0;width:100%;max-width:420px;text-align:left}
+.rituals li{display:grid;grid-template-columns:52px 1fr;gap:14px;align-items:center;padding:12px 0;border-bottom:1px dashed rgba(184,137,47,.45);opacity:0;transform:translateX(-14px)}
+.rituals li:last-child{border-bottom:0}
+.page.active .rituals li{animation:slideIn .7s cubic-bezier(.22,1,.36,1) forwards}
+.page.active .rituals li:nth-child(2){animation-delay:.15s}.page.active .rituals li:nth-child(3){animation-delay:.3s}.page.active .rituals li:nth-child(4){animation-delay:.45s}
+@keyframes slideIn{to{opacity:1;transform:none}}
+.rituals svg{width:52px;height:52px;padding:8px;border-radius:50%;background:#fff;border:1px solid #efdcb4;overflow:visible}
+.rituals svg *{fill:none;stroke:var(--maroon);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.rituals svg .g{stroke:var(--gold)}.rituals svg .l{stroke:var(--leaf)}
+.rituals svg .f{fill:var(--gold-soft)}
+.r-name{font-size:23px;font-weight:600;color:var(--maroon);line-height:1.1}
+.r-name .ml{font-size:13px;font-weight:400;color:var(--gold);margin-left:6px}
+.r-desc{font-size:16px;color:var(--muted);line-height:1.35}
+
+/* ---------- venue ---------- */
+.location-card{width:100%;background:#fff;border-radius:24px;padding:22px 18px;box-shadow:0 12px 35px rgba(90,60,20,.1);border:1px solid #efdcb4}
+.venue-sketch{width:100%;max-width:330px;height:auto;display:block;margin:0 auto 6px;overflow:visible}
+.venue-sketch path{fill:none;stroke:var(--maroon);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.venue-sketch .thin{stroke-width:1.1}
+.venue-sketch .gold{stroke:var(--gold)}
+.venue-sketch .leaf{stroke:var(--leaf)}
+.venue-sketch .draw{stroke-dasharray:700;stroke-dashoffset:700}
+.page.active .venue-sketch .draw{animation:sketchDraw 2.8s ease forwards}
+.venue-sketch .bulbs circle{animation:glow 2.2s ease-in-out infinite;filter:drop-shadow(0 0 3px #f6c86b)}
+.venue-sketch .bulbs circle:nth-child(2n){animation-delay:.7s}
+.location-title{font-size:30px;font-weight:600;color:var(--maroon);margin-bottom:6px}
+.venue-sub{font-family:Arial,sans-serif;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;line-height:1.7}
+.location-note{font-size:17px;line-height:1.5;color:var(--muted)}
+.map-btn{display:inline-block;margin-top:16px;padding:12px 22px;border-radius:30px;background:var(--maroon);color:#fff;text-decoration:none;font-family:Arial,sans-serif;font-size:12px;letter-spacing:1px;box-shadow:0 6px 18px rgba(122,31,43,.25)}
+
+@keyframes sketchDraw{to{stroke-dashoffset:0}}
+
+.tap{position:fixed;z-index:10;bottom:44px;left:50%;transform:translateX(-50%);font:10px Arial,sans-serif;color:var(--muted);letter-spacing:1px;animation:pulse 1.8s infinite;transition:opacity .4s}
+.tap.gone{opacity:0;animation:none;pointer-events:none}
+@keyframes pulse{50%{opacity:.35}}
+
+/* falling petals on the cover and last page */
+.petal{position:absolute;top:-20px;width:9px;height:12px;border-radius:60% 0 60% 0;background:var(--flame);opacity:.65;z-index:1;animation:fall linear infinite}
+.petal.w{background:#fff;box-shadow:0 0 0 1px #eadfc4}
+@keyframes fall{to{transform:translateY(110svh) rotate(540deg)}}
+
+@media (max-height:760px){
+  .page-inner{padding-top:48px;padding-bottom:70px}
+  .lamp{width:96px}
+  .rituals li{padding:8px 0}
+  .venue-sketch{max-width:270px}
+}
+@media (prefers-reduced-motion:reduce){
+  .jasmine .strand,#nilavilakku .flame,#nilavilakku .glow,.petal,.venue-sketch .bulbs circle{animation:none!important}
+  .garland .draw,.venue-sketch .draw{stroke-dasharray:none;stroke-dashoffset:0;animation:none!important}
+  .rituals li{opacity:1;transform:none;animation:none!important}
+  .petal{display:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="brass" x1="0" x2="1">
+      <stop offset="0" stop-color="#a9772a"/><stop offset=".45" stop-color="#f1d184"/><stop offset="1" stop-color="#9b6a22"/>
+    </linearGradient>
+    <radialGradient id="flameFill" cx=".5" cy=".75" r=".7">
+      <stop offset="0" stop-color="#fff6c9"/><stop offset=".45" stop-color="#ffc94d"/><stop offset="1" stop-color="#e86a1f"/>
+    </radialGradient>
+    <radialGradient id="halo"><stop offset="0" stop-color="#ffd98a" stop-opacity=".75"/><stop offset="1" stop-color="#ffd98a" stop-opacity="0"/></radialGradient>
+    <symbol id="nilavilakku" viewBox="0 0 120 210">
+      <circle class="glow" cx="60" cy="52" r="58" fill="url(#halo)"/>
+      <!-- finial -->
+      <path class="brass" d="M60 10c-5 6-5 12 0 16 5-4 5-10 0-16zM57 26h6v34h-6z"/>
+      <!-- wick flames on the rim -->
+      <path class="flame" fill="url(#flameFill)" d="M24 64c-5-5-4-12 0-20 4 8 5 15 0 20z"/>
+      <path class="flame" fill="url(#flameFill)" d="M42 66c-5-5-4-12 0-20 4 8 5 15 0 20z"/>
+      <path class="flame" fill="url(#flameFill)" d="M78 66c-5-5-4-12 0-20 4 8 5 15 0 20z"/>
+      <path class="flame" fill="url(#flameFill)" d="M96 64c-5-5-4-12 0-20 4 8 5 15 0 20z"/>
+      <!-- bowl -->
+      <path class="brass" d="M14 64h92c-4 16-24 24-46 24S18 80 14 64z"/>
+      <ellipse class="brass" cx="60" cy="64" rx="46" ry="4"/>
+      <!-- stem with rings -->
+      <path class="brass" d="M55 88h10v90H55z"/>
+      <ellipse class="brass" cx="60" cy="100" rx="11" ry="5"/>
+      <ellipse class="brass" cx="60" cy="126" rx="14" ry="6"/>
+      <ellipse class="brass" cx="60" cy="152" rx="11" ry="5"/>
+      <!-- base -->
+      <path class="brass" d="M60 170c-20 0-34 14-38 30h76c-4-16-18-30-38-30z"/>
+      <ellipse class="brass" cx="60" cy="201" rx="42" ry="5"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="app">
+  <div class="book" id="book">
+
+    <!-- 0 · Cover -->
+    <section class="page active" data-page="0">
+      <div class="jasmine" data-strands="9"></div>
+      <div class="petals"></div>
+      <div class="page-inner">
+        <svg class="lamp" viewBox="0 0 120 210" role="img" aria-label="A lit nilavilakku"><use href="#nilavilakku"/></svg>
+        <div class="ml ml-kicker">ശുഭവിവാഹം</div>
+        <div class="kicker">Our Wedding</div>
+        <div class="names">Neenu</div>
+        <div class="amp">&amp;</div>
+        <div class="names">Vishnu</div>
+        <div class="ornament">✦ ✧ ✦</div>
+        <div class="small" style="max-width:340px">With the blessings of the Almighty and our elders, we are tying the knot, and we want you there.</div>
+      </div>
+      <div class="footer">15 · 11 · 2026</div>
+    </section>
+
+    <!-- 1 · Couple & families -->
+    <section class="page" data-page="1">
+      <div class="jasmine" data-strands="7"></div>
+      <div class="page-inner">
+        <div class="kicker">Two Families · One Blessing</div>
+        <div class="person"><div class="person-name">Neenu</div><div class="person-parents">Daughter of Joseph Shaji &amp; Shyla Shaji</div></div>
+        <svg class="garland" viewBox="0 0 200 90" aria-hidden="true">
+          <!-- two exchanged garlands (varanamaalyam) meeting at a heart -->
+          <path class="draw" stroke="#e9e2cf" stroke-width="7" d="M18 8C10 60 70 82 100 58"/>
+          <path class="draw" stroke="#e9e2cf" stroke-width="7" d="M182 8C190 60 130 82 100 58"/>
+          <path class="draw" stroke="var(--flame)" stroke-width="3" stroke-dasharray="2 7" d="M18 8C10 60 70 82 100 58"/>
+          <path class="draw" stroke="var(--maroon-soft)" stroke-width="3" stroke-dasharray="2 7" d="M182 8C190 60 130 82 100 58"/>
+          <path class="draw" stroke="var(--gold)" stroke-width="1.8" fill="none" d="M100 52c-5-9-17-5-13 4 3 6 13 12 13 12s10-6 13-12c4-9-8-13-13-4z"/>
+        </svg>
+        <div class="person"><div class="person-name">Vishnu</div><div class="person-parents">Son of E. V. Sureshan &amp; Sheeba P. V.</div></div>
+        <div class="ornament">❦</div>
+        <div class="small" style="color:var(--muted)">From an engagement on the backwaters<br>to a muhoortham in Kannur.</div>
+      </div>
+      <div class="footer">Our new chapter begins</div>
+    </section>
+
+    <!-- 2 · Date & muhoortham -->
+    <section class="page" data-page="2">
+      <div class="page-inner">
+        <div class="kicker">Save the Date</div>
+        <div class="day">Sunday</div>
+        <div class="date">15</div>
+        <div class="date-sub">November · 2026</div>
+        <div class="muhoortham">
+          <span class="ml">ശുഭമുഹൂർത്തം</span>
+          <b>10:15 – 10:55 AM</b>
+        </div>
+        <div class="countdown">
+          <div class="timebox"><div class="num" id="days">--</div><div class="label">Days</div></div>
+          <div class="timebox"><div class="num" id="hours">--</div><div class="label">Hours</div></div>
+          <div class="timebox"><div class="num" id="mins">--</div><div class="label">Minutes</div></div>
+          <div class="timebox"><div class="num" id="secs">--</div><div class="label">Seconds</div></div>
+        </div>
+        <div class="ornament">✦ ✦ ✦</div>
+        <div class="small" style="max-width:330px">Please be seated a little before the muhoortham so you don't miss the thali.</div>
+      </div>
+      <div class="footer">Counting down to the muhoortham</div>
+    </section>
+
+    <!-- 3 · Moments of the day -->
+    <section class="page" data-page="3">
+      <div class="jasmine" data-strands="7"></div>
+      <div class="page-inner">
+        <div class="kicker">Moments of the Morning</div>
+        <div class="title" style="margin-bottom:6px">A Kerala Wedding</div>
+        <ul class="rituals">
+          <li>
+            <svg viewBox="0 0 36 36" aria-hidden="true"><path class="g" d="M4 4c3 10 8 15 14 15s11-5 14-15"/><path class="f" d="M18 19c-4 4-5 9 0 14 5-5 4-10 0-14z"/></svg>
+            <div><div class="r-name">Thalikettu<span class="ml">താലികെട്ട്</span></div><div class="r-desc">The sacred thali is tied at the auspicious muhoortham.</div></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="17" r="12" stroke-dasharray="1.5 3.5" stroke-width="3" class="g"/><circle cx="18" cy="17" r="12" stroke-width="1"/><path d="M18 29v4"/></svg>
+            <div><div class="r-name">Varanamaalyam<span class="ml">മാലയിടൽ</span></div><div class="r-desc">Jasmine and rose garlands are exchanged.</div></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 36 36" aria-hidden="true"><path d="M6 10h24v18H6z"/><path class="g" d="M6 24h24M6 26.5h24"/><path d="M6 10l6-5h12l6 5"/></svg>
+            <div><div class="r-name">Pudavakoda<span class="ml">പുടവകൊട</span></div><div class="r-desc">The groom gifts the bride her wedding pudava.</div></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 36 36" aria-hidden="true"><path class="l" d="M3 26C10 10 26 6 33 10 28 24 14 30 3 26z"/><path class="l" d="M3 26L33 10"/><circle class="f" cx="15" cy="19" r="2.2" stroke="none"/><circle class="f" cx="21" cy="15" r="1.8" stroke="none"/><circle cx="25" cy="18" r="1.6" stroke="none" style="fill:var(--maroon-soft)"/></svg>
+            <div><div class="r-name">Sadya<span class="ml">സദ്യ</span></div><div class="r-desc">Lunch on a banana leaf. Leave room for the payasam.</div></div>
+          </li>
+        </ul>
+      </div>
+      <div class="footer">Tradition · Togetherness · Taste</div>
+    </section>
+
+    <!-- 4 · Venue -->
+    <section class="page" data-page="4">
+      <div class="page-inner">
+        <div class="kicker">Wedding Venue</div>
+        <div class="location-card">
+          <svg class="venue-sketch" viewBox="0 0 320 200" role="img" aria-label="Sketch of a Kerala-style auditorium entrance with banana plants and a coconut-leaf thoranam">
+            <circle cx="160" cy="80" r="66" fill="#fbf0d6" opacity=".9" stroke="none" style="stroke:none"/>
+            <!-- ground -->
+            <path class="draw gold" d="M8 182Q160 172 312 182"/>
+            <!-- coconut palm, left back -->
+            <path class="draw leaf" d="M36 180C38 140 42 100 50 64"/>
+            <path class="draw leaf" d="M50 64C36 54 20 58 10 72M50 64C40 46 24 42 14 46M50 64C56 46 70 36 86 38M50 64C68 58 82 64 90 76"/>
+            <!-- tiled kerala roof, two tiers -->
+            <path class="draw" d="M96 92L160 48L224 92M88 96H232"/>
+            <path class="draw thin" d="M104 92L160 54L216 92M120 82h80M136 70h48"/>
+            <path class="draw" d="M150 52l10-14 10 14"/>
+            <path class="draw" d="M108 108L160 92 212 108M102 112H218"/>
+            <!-- walls & pillars -->
+            <path class="draw" d="M112 112V176M208 112V176M136 112V176M184 112V176"/>
+            <!-- doorway -->
+            <path class="draw" d="M146 176V136Q160 122 174 136V176"/>
+            <!-- coconut leaf thoranam across the front -->
+            <path class="draw gold" d="M104 118Q160 132 216 118"/>
+            <path class="draw thin leaf" d="M112 121l-2 8M122 124l-1 9M132 126l-1 9M142 128v9M152 129v9M160 129.5v9M168 129v9M178 128v9M188 126l1 9M198 124l1 9M208 121l2 8"/>
+            <!-- string lights under the roof -->
+            <g class="bulbs" fill="#f6c86b">
+              <circle cx="116" cy="98" r="2.4"/><circle cx="136" cy="100" r="2.4"/><circle cx="160" cy="101" r="2.4"/><circle cx="184" cy="100" r="2.4"/><circle cx="204" cy="98" r="2.4"/>
+            </g>
+            <!-- banana plants at the entrance -->
+            <path class="draw leaf" d="M90 178V128M90 132C78 118 70 116 62 122C72 130 82 132 90 132M90 140C100 124 110 120 118 124C110 132 100 138 90 140M90 128C88 112 92 104 96 98"/>
+            <path class="draw leaf" d="M230 178V128M230 132C242 118 250 116 258 122C248 130 238 132 230 132M230 140C220 124 210 120 202 124C210 132 220 138 230 140M230 128C232 112 228 104 224 98"/>
+            <!-- small lamps at the door -->
+            <path class="draw gold" d="M142 176v-10M138 166h8M178 176v-10M174 166h8"/>
+            <circle cx="142" cy="162" r="2.5" fill="#f6a33a" stroke="none" style="stroke:none"/>
+            <circle cx="178" cy="162" r="2.5" fill="#f6a33a" stroke="none" style="stroke:none"/>
+            <!-- pookkalam at the entrance -->
+            <ellipse cx="160" cy="186" rx="22" ry="5" fill="#f2a33a" opacity=".55" stroke="none" style="stroke:none"/>
+            <ellipse cx="160" cy="186" rx="12" ry="2.8" fill="var(--maroon-soft)" opacity=".6" stroke="none" style="stroke:none"/>
+            <ellipse cx="160" cy="186" rx="5" ry="1.4" fill="#fff" stroke="none" style="stroke:none"/>
+          </svg>
+          <div class="location-title">PCR Bank Auditorium</div>
+          <div class="venue-sub">Dharmashala, NH 66<br>Kannur · Kerala</div>
+          <div class="location-note">The lamps will be lit and the jasmine strung.<br>All that's missing is you.</div>
+          <a class="map-btn" href="https://maps.app.goo.gl/8HVjMUzHRXcdHvLg8" target="_blank" rel="noopener">OPEN IN GOOGLE MAPS</a>
+        </div>
+        <div class="ornament">❦</div>
+        <div class="small">Sunday, 15 November 2026 · 10:15 AM</div>
+      </div>
+      <div class="footer">Come bless us</div>
+    </section>
+
+    <!-- 5 · Invitation -->
+    <section class="page" data-page="5">
+      <div class="jasmine" data-strands="9"></div>
+      <div class="page-inner">
+        <div class="kicker">With Folded Hands</div>
+        <div class="title">You Are Invited</div>
+        <div class="ornament">✦ ♡ ✦</div>
+        <div class="text">
+          On the most important morning of our lives,<br>
+          we would love to have you there.<br>
+          Your blessings are the best gift you can bring.
+        </div>
+        <div class="names" style="font-size:clamp(48px,13vw,78px);margin-top:20px">Neenu &amp; Vishnu</div>
+        <div class="small" style="margin-top:14px;color:var(--muted)">Sunday, 15 November 2026<br>Muhoortham 10:15 – 10:55 AM</div>
+      </div>
+      <div class="footer">With love, from us &amp; our families</div>
+    </section>
+
+    <!-- 6 · Thank you -->
+    <section class="page" data-page="6">
+      <div class="petals"></div>
+      <div class="page-inner">
+        <svg class="lamp" viewBox="0 0 120 210" aria-hidden="true" style="width:84px"><use href="#nilavilakku"/></svg>
+        <div class="ml ml-kicker">നന്ദി</div>
+        <div class="kicker">With Gratitude</div>
+        <div class="title">Thank You</div>
+        <div class="ornament">✦ ♡ ✦</div>
+        <div class="text">for being a part of our story.<br>Your love and blessings<br>mean the world to us.</div>
+        <div class="names" style="font-size:clamp(42px,11vw,66px);margin-top:20px">Neenu &amp; Vishnu</div>
+      </div>
+      <div class="footer">Forever grateful</div>
+    </section>
+
+  </div>
+
+  <div class="tap">Scroll down to continue ↓</div>
+</div>
+
+<script>
+// ---- Jasmine strands: build hanging mullappoo strings with a marigold at the tip ----
+const NS='http://www.w3.org/2000/svg';
+document.querySelectorAll('.jasmine').forEach(box=>{
+  const n=+box.dataset.strands||7;
+  const svg=document.createElementNS(NS,'svg');
+  svg.setAttribute('viewBox','0 0 300 150');
+  svg.setAttribute('preserveAspectRatio','none');
+  svg.setAttribute('aria-hidden','true');
+  for(let i=0;i<n;i++){
+    const x=12+i*(276/(n-1));
+    // longer strands at the edges, shorter towards the middle, like a curtain
+    const t=Math.abs(i-(n-1)/2)/((n-1)/2);
+    const len=40+t*85;
+    const g=document.createElementNS(NS,'g');
+    g.setAttribute('class','strand');
+    g.style.transformOrigin=`${x}px 0px`;
+    const line=document.createElementNS(NS,'line');
+    Object.entries({x1:x,y1:0,x2:x,y2:len,stroke:'#c9b78e','stroke-width':.6}).forEach(([k,v])=>line.setAttribute(k,v));
+    g.appendChild(line);
+    for(let y=6;y<len;y+=7){
+      const bud=document.createElementNS(NS,'ellipse');
+      Object.entries({cx:x+((y/7)%2?1.2:-1.2),cy:y,rx:2.4,ry:3.2,fill:'#fffdf6',stroke:'#e2d6b8','stroke-width':.5}).forEach(([k,v])=>bud.setAttribute(k,v));
+      g.appendChild(bud);
+    }
+    const tip=document.createElementNS(NS,'circle');
+    Object.entries({cx:x,cy:len+4,r:4.2,fill:i%2?'#e98a1f':'#a8323e'}).forEach(([k,v])=>tip.setAttribute(k,v));
+    g.appendChild(tip);
+    svg.appendChild(g);
+  }
+  box.appendChild(svg);
+});
+
+// ---- Falling petals ----
+document.querySelectorAll('.petals').forEach(box=>{
+  for(let i=0;i<14;i++){
+    const p=document.createElement('span');
+    p.className='petal'+(i%3===0?' w':'');
+    p.style.left=Math.random()*100+'%';
+    p.style.animationDuration=(7+Math.random()*7)+'s';
+    p.style.animationDelay=(-Math.random()*12)+'s';
+    p.style.transform=`scale(${.7+Math.random()*.6})`;
+    box.parentElement.appendChild(p);
+  }
+});
+
+// ---- Page navigation (same behaviour as the engagement invite) ----
+const pages=[...document.querySelectorAll('.page')];
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting && entry.intersectionRatio>=.55){
+      const i=pages.indexOf(entry.target);
+      pages.forEach((page,n)=>page.classList.toggle('active',n===i));
+      document.querySelector('.tap').classList.toggle('gone',i===pages.length-1);
+    }
+  });
+},{threshold:[.55,.75]});
+pages.forEach(page=>observer.observe(page));
+
+function currentPage(){
+  let best=0,bestDistance=Infinity;
+  pages.forEach((page,i)=>{
+    const distance=Math.abs(page.getBoundingClientRect().top);
+    if(distance<bestDistance){bestDistance=distance;best=i}
+  });
+  return best;
+}
+function go(index){
+  index=Math.max(0,Math.min(pages.length-1,index));
+  pages[index].scrollIntoView({behavior:'smooth',block:'start'});
+}
+function next(){go(currentPage()+1)}
+function prev(){go(currentPage()-1)}
+
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowDown'||e.key==='PageDown'||e.key===' '){e.preventDefault();next()}
+  if(e.key==='ArrowUp'||e.key==='PageUp'){e.preventDefault();prev()}
+});
+
+// Mouse wheel: move one complete invitation page at a time.
+let wheelLock=false;
+window.addEventListener('wheel',e=>{
+  if(Math.abs(e.deltaY)<8||wheelLock) return;
+  wheelLock=true;
+  e.deltaY>0?next():prev();
+  setTimeout(()=>wheelLock=false,900);
+},{passive:true});
+
+// Touch swipe: one page per swipe.
+let startX=0,startY=0;
+window.addEventListener('touchstart',e=>{startX=e.touches[0].clientX;startY=e.touches[0].clientY},{passive:true});
+window.addEventListener('touchend',e=>{
+  const dx=e.changedTouches[0].clientX-startX;
+  const dy=e.changedTouches[0].clientY-startY;
+  if(Math.abs(dy)>55&&Math.abs(dy)>Math.abs(dx)){dy<0?next():prev()}
+},{passive:true});
+
+// ---- Countdown to the muhoortham ----
+const target=new Date('2026-11-15T10:15:00+05:30');
+function countdown(){
+  const total=Math.floor(Math.max(0,target-new Date())/1000);
+  const set=(id,v)=>document.getElementById(id).textContent=String(v).padStart(2,'0');
+  set('days',Math.floor(total/86400));
+  set('hours',Math.floor((total%86400)/3600));
+  set('mins',Math.floor((total%3600)/60));
+  set('secs',total%60);
+}
+countdown();
+setInterval(countdown,1000);
+</script>
+</body>
+</html>
