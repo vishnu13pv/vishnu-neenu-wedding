@@ -117,21 +117,6 @@ body{overflow-x:hidden}
 .num{font-size:30px;font-weight:600;color:var(--maroon)}
 .label{font-family:Arial,sans-serif;font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-top:4px}
 
-/* ---------- rituals ---------- */
-.rituals{list-style:none;margin:6px 0 0;padding:0;width:100%;max-width:420px;text-align:left}
-.rituals li{display:grid;grid-template-columns:52px 1fr;gap:14px;align-items:center;padding:12px 0;border-bottom:1px dashed rgba(184,137,47,.45);opacity:0;transform:translateX(-14px)}
-.rituals li:last-child{border-bottom:0}
-.page.active .rituals li{animation:slideIn .7s cubic-bezier(.22,1,.36,1) forwards}
-.page.active .rituals li:nth-child(2){animation-delay:.15s}.page.active .rituals li:nth-child(3){animation-delay:.3s}.page.active .rituals li:nth-child(4){animation-delay:.45s}
-@keyframes slideIn{to{opacity:1;transform:none}}
-.rituals svg{width:52px;height:52px;padding:8px;border-radius:50%;background:#fff;border:1px solid #efdcb4;overflow:visible}
-.rituals svg *{fill:none;stroke:var(--maroon);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-.rituals svg .g{stroke:var(--gold)}.rituals svg .l{stroke:var(--leaf)}
-.rituals svg .f{fill:var(--gold-soft)}
-.r-name{font-size:23px;font-weight:600;color:var(--maroon);line-height:1.1}
-.r-name .ml{font-size:13px;font-weight:400;color:var(--gold);margin-left:6px}
-.r-desc{font-size:16px;color:var(--muted);line-height:1.35}
-
 /* ---------- venue ---------- */
 .location-card{width:100%;background:#fff;border-radius:24px;padding:22px 18px;box-shadow:0 12px 35px rgba(90,60,20,.1);border:1px solid #efdcb4}
 .venue-sketch{width:100%;max-width:330px;height:auto;display:block;margin:0 auto 6px;overflow:visible}
@@ -162,13 +147,11 @@ body{overflow-x:hidden}
 @media (max-height:760px){
   .page-inner{padding-top:48px;padding-bottom:70px}
   .lamp{width:96px}
-  .rituals li{padding:8px 0}
   .venue-sketch{max-width:270px}
 }
 @media (prefers-reduced-motion:reduce){
   .jasmine .strand,#nilavilakku .flame,#nilavilakku .glow,.petal,.venue-sketch .bulbs circle{animation:none!important}
   .garland .draw,.venue-sketch .draw{stroke-dasharray:none;stroke-dashoffset:0;animation:none!important}
-  .rituals li{opacity:1;transform:none;animation:none!important}
   .petal{display:none}
 }
 </style>
@@ -273,36 +256,8 @@ body{overflow-x:hidden}
       <div class="footer">Counting down to the muhoortham</div>
     </section>
 
-    <!-- 3 · Moments of the day -->
+    <!-- 3 · Venue -->
     <section class="page" data-page="3">
-      <div class="jasmine" data-strands="7"></div>
-      <div class="page-inner">
-        <div class="kicker">Moments of the Morning</div>
-        <div class="title" style="margin-bottom:6px">A Kerala Wedding</div>
-        <ul class="rituals">
-          <li>
-            <svg viewBox="0 0 36 36" aria-hidden="true"><path class="g" d="M4 4c3 10 8 15 14 15s11-5 14-15"/><path class="f" d="M18 19c-4 4-5 9 0 14 5-5 4-10 0-14z"/></svg>
-            <div><div class="r-name">Thalikettu<span class="ml">താലികെട്ട്</span></div><div class="r-desc">The sacred thali is tied at the auspicious muhoortham.</div></div>
-          </li>
-          <li>
-            <svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="17" r="12" stroke-dasharray="1.5 3.5" stroke-width="3" class="g"/><circle cx="18" cy="17" r="12" stroke-width="1"/><path d="M18 29v4"/></svg>
-            <div><div class="r-name">Varanamaalyam<span class="ml">മാലയിടൽ</span></div><div class="r-desc">Jasmine and rose garlands are exchanged.</div></div>
-          </li>
-          <li>
-            <svg viewBox="0 0 36 36" aria-hidden="true"><path d="M6 10h24v18H6z"/><path class="g" d="M6 24h24M6 26.5h24"/><path d="M6 10l6-5h12l6 5"/></svg>
-            <div><div class="r-name">Pudavakoda<span class="ml">പുടവകൊട</span></div><div class="r-desc">The groom gifts the bride her wedding pudava.</div></div>
-          </li>
-          <li>
-            <svg viewBox="0 0 36 36" aria-hidden="true"><path class="l" d="M3 26C10 10 26 6 33 10 28 24 14 30 3 26z"/><path class="l" d="M3 26L33 10"/><circle class="f" cx="15" cy="19" r="2.2" stroke="none"/><circle class="f" cx="21" cy="15" r="1.8" stroke="none"/><circle cx="25" cy="18" r="1.6" stroke="none" style="fill:var(--maroon-soft)"/></svg>
-            <div><div class="r-name">Sadya<span class="ml">സദ്യ</span></div><div class="r-desc">Lunch on a banana leaf. Leave room for the payasam.</div></div>
-          </li>
-        </ul>
-      </div>
-      <div class="footer">Tradition · Togetherness · Taste</div>
-    </section>
-
-    <!-- 4 · Venue -->
-    <section class="page" data-page="4">
       <div class="page-inner">
         <div class="kicker">Wedding Venue</div>
         <div class="location-card">
@@ -352,8 +307,8 @@ body{overflow-x:hidden}
       <div class="footer">Come bless us</div>
     </section>
 
-    <!-- 5 · Invitation -->
-    <section class="page" data-page="5">
+    <!-- 4 · Invitation -->
+    <section class="page" data-page="4">
       <div class="jasmine" data-strands="9"></div>
       <div class="page-inner">
         <div class="kicker">With Folded Hands</div>
@@ -370,8 +325,8 @@ body{overflow-x:hidden}
       <div class="footer">With love, Vishnu &amp; family</div>
     </section>
 
-    <!-- 6 · Thank you -->
-    <section class="page" data-page="6">
+    <!-- 5 · Thank you -->
+    <section class="page" data-page="5">
       <div class="petals"></div>
       <div class="page-inner">
         <svg class="lamp" viewBox="0 0 120 210" aria-hidden="true" style="width:84px"><use href="#nilavilakku"/></svg>
