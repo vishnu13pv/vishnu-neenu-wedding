@@ -9,12 +9,12 @@
 <meta property="og:url" content="https://vishnu13pv.github.io/vishnu-neenu-wedding/">
 <meta property="og:title" content="Vishnu &amp; Neenu — Wedding Invitation">
 <meta property="og:description" content="Sunday, 15 November 2026 · Ceremony 10:15 – 10:55 AM · PCR Bank Auditorium, Dharmashala, Kannur. We would love to have you with us.">
-<meta property="og:image" content="https://vishnu13pv.github.io/vishnu-neenu-wedding/preview.png?v=3">
-<meta property="og:image:secure_url" content="https://vishnu13pv.github.io/vishnu-neenu-wedding/preview.png?v=3">
+<meta property="og:image" content="https://vishnu13pv.github.io/vishnu-neenu-wedding/preview.png?v=4">
+<meta property="og:image:secure_url" content="https://vishnu13pv.github.io/vishnu-neenu-wedding/preview.png?v=4">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="A lit traditional lamp with the names Vishnu and Neenu">
+<meta property="og:image:alt" content="Two gold wedding rings with the names Vishnu and Neenu">
 <meta name="twitter:card" content="summary_large_image">
 <title>Vishnu & Neenu — Wedding Invitation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,13 +87,17 @@ body{overflow-x:hidden}
 .jasmine .strand:nth-child(3n){animation-delay:-3.1s}
 @keyframes sway{0%,100%{transform:rotate(-1.6deg)}50%{transform:rotate(1.6deg)}}
 
-/* ---------- nilavilakku ---------- */
-.lamp{width:120px;height:auto;display:block;margin:0 auto 4px;overflow:visible}
-#nilavilakku .brass{fill:url(#brass);stroke:#8c6420;stroke-width:1.2}
-#nilavilakku .flame{transform-box:fill-box;transform-origin:50% 100%;animation:flicker 1.6s ease-in-out infinite}
-#nilavilakku .flame:nth-of-type(2){animation-delay:-.4s}#nilavilakku .flame:nth-of-type(3){animation-delay:-.9s}#nilavilakku .flame:nth-of-type(4){animation-delay:-1.2s}
-#nilavilakku .glow{animation:glow 2.4s ease-in-out infinite}
-@keyframes flicker{0%,100%{transform:scale(1,1) rotate(0)}25%{transform:scale(.92,1.08) rotate(-3deg)}55%{transform:scale(1.05,.93) rotate(2deg)}80%{transform:scale(.97,1.04) rotate(-1deg)}}
+/* ---------- wedding rings ---------- */
+.rings{width:170px;height:auto;display:block;margin:0 auto 10px;overflow:visible}
+#rings .band{fill:none;stroke:url(#brass);stroke-width:7;stroke-linecap:round}
+#rings .shine{fill:none;stroke:#fff6d8;stroke-width:1.2;opacity:.7;stroke-dasharray:30 184;stroke-dashoffset:-150}
+#rings .setting{fill:none;stroke:#b8892f;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+#rings .gem{fill:#f4f9ff;stroke:#b8892f;stroke-width:1.4;stroke-linejoin:round}
+#rings .facet{fill:none;stroke:#c9d8ea;stroke-width:.9}
+#rings .sparkle{fill:var(--gold-soft);transform-box:fill-box;transform-origin:center;animation:twinkle 2.4s ease-in-out infinite}
+#rings .sparkle:nth-of-type(2){animation-delay:-.8s}#rings .sparkle:nth-of-type(3){animation-delay:-1.6s}
+#rings .glow{animation:glow 2.4s ease-in-out infinite}
+@keyframes twinkle{0%,100%{transform:scale(.4);opacity:.3}50%{transform:scale(1);opacity:1}}
 @keyframes glow{50%{opacity:.55}}
 
 /* ---------- couple ---------- */
@@ -144,11 +148,11 @@ body{overflow-x:hidden}
 
 @media (max-height:760px){
   .page-inner{padding-top:48px;padding-bottom:70px}
-  .lamp{width:96px}
+  .rings{width:140px}
   .venue-sketch{max-width:270px}
 }
 @media (prefers-reduced-motion:reduce){
-  .jasmine .strand,#nilavilakku .flame,#nilavilakku .glow,.petal,.venue-sketch .bulbs circle{animation:none!important}
+  .jasmine .strand,#rings .sparkle,#rings .glow,.petal,.venue-sketch .bulbs circle{animation:none!important}
   .garland .draw,.venue-sketch .draw{stroke-dasharray:none;stroke-dashoffset:0;animation:none!important}
   .petal{display:none}
 }
@@ -160,30 +164,23 @@ body{overflow-x:hidden}
     <linearGradient id="brass" x1="0" x2="1">
       <stop offset="0" stop-color="#a9772a"/><stop offset=".45" stop-color="#f1d184"/><stop offset="1" stop-color="#9b6a22"/>
     </linearGradient>
-    <radialGradient id="flameFill" cx=".5" cy=".75" r=".7">
-      <stop offset="0" stop-color="#fff6c9"/><stop offset=".45" stop-color="#ffc94d"/><stop offset="1" stop-color="#e86a1f"/>
-    </radialGradient>
     <radialGradient id="halo"><stop offset="0" stop-color="#ffd98a" stop-opacity=".75"/><stop offset="1" stop-color="#ffd98a" stop-opacity="0"/></radialGradient>
-    <symbol id="nilavilakku" viewBox="0 0 120 210">
-      <circle class="glow" cx="60" cy="52" r="58" fill="url(#halo)"/>
-      <!-- finial -->
-      <path class="brass" d="M60 10c-5 6-5 12 0 16 5-4 5-10 0-16zM57 26h6v34h-6z"/>
-      <!-- wick flames on the rim -->
-      <path class="flame" fill="url(#flameFill)" d="M24 64c-5-5-4-12 0-20 4 8 5 15 0 20z"/>
-      <path class="flame" fill="url(#flameFill)" d="M42 66c-5-5-4-12 0-20 4 8 5 15 0 20z"/>
-      <path class="flame" fill="url(#flameFill)" d="M78 66c-5-5-4-12 0-20 4 8 5 15 0 20z"/>
-      <path class="flame" fill="url(#flameFill)" d="M96 64c-5-5-4-12 0-20 4 8 5 15 0 20z"/>
-      <!-- bowl -->
-      <path class="brass" d="M14 64h92c-4 16-24 24-46 24S18 80 14 64z"/>
-      <ellipse class="brass" cx="60" cy="64" rx="46" ry="4"/>
-      <!-- stem with rings -->
-      <path class="brass" d="M55 88h10v90H55z"/>
-      <ellipse class="brass" cx="60" cy="100" rx="11" ry="5"/>
-      <ellipse class="brass" cx="60" cy="126" rx="14" ry="6"/>
-      <ellipse class="brass" cx="60" cy="152" rx="11" ry="5"/>
-      <!-- base -->
-      <path class="brass" d="M60 170c-20 0-34 14-38 30h76c-4-16-18-30-38-30z"/>
-      <ellipse class="brass" cx="60" cy="201" rx="42" ry="5"/>
+    <symbol id="rings" viewBox="0 0 160 130">
+      <circle class="glow" cx="80" cy="72" r="62" fill="url(#halo)"/>
+      <!-- two interlocked gold bands -->
+      <circle class="band" cx="62" cy="78" r="34"/>
+      <circle class="band" cx="98" cy="78" r="34"/>
+      <path class="band" d="M86 102A34 34 0 0 1 72.5 110.3"/>
+      <circle class="shine" cx="62" cy="78" r="34"/>
+      <circle class="shine" cx="98" cy="78" r="34"/>
+      <!-- solitaire on the left ring -->
+      <path class="setting" d="M58 46l4-6 4 6"/>
+      <path class="gem" d="M50 32l5-7h14l5 7-12 13z"/>
+      <path class="facet" d="M50 32h24M55 25l3 7 4 13M69 25l-3 7-4 13M58 32l4-7 4 7"/>
+      <!-- twinkles -->
+      <path class="sparkle" d="M86 22l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/>
+      <path class="sparkle" d="M38 18l1.4 4 4 1.4-4 1.4-1.4 4-1.4-4-4-1.4 4-1.4z"/>
+      <path class="sparkle" d="M126 40l1.4 4 4 1.4-4 1.4-1.4 4-1.4-4-4-1.4 4-1.4z"/>
     </symbol>
   </defs>
 </svg>
@@ -196,7 +193,7 @@ body{overflow-x:hidden}
       <div class="jasmine" data-strands="9"></div>
       <div class="petals"></div>
       <div class="page-inner">
-        <svg class="lamp" viewBox="0 0 120 210" role="img" aria-label="A lit nilavilakku"><use href="#nilavilakku"/></svg>
+        <svg class="rings" viewBox="0 0 160 130" role="img" aria-label="Two interlocked wedding rings"><use href="#rings"/></svg>
         <div class="names">Vishnu</div>
         <div class="amp">&amp;</div>
         <div class="names">Neenu</div>
@@ -283,10 +280,6 @@ body{overflow-x:hidden}
             <!-- banana plants at the entrance -->
             <path class="draw leaf" d="M90 178V128M90 132C78 118 70 116 62 122C72 130 82 132 90 132M90 140C100 124 110 120 118 124C110 132 100 138 90 140M90 128C88 112 92 104 96 98"/>
             <path class="draw leaf" d="M230 178V128M230 132C242 118 250 116 258 122C248 130 238 132 230 132M230 140C220 124 210 120 202 124C210 132 220 138 230 140M230 128C232 112 228 104 224 98"/>
-            <!-- small lamps at the door -->
-            <path class="draw gold" d="M142 176v-10M138 166h8M178 176v-10M174 166h8"/>
-            <circle cx="142" cy="162" r="2.5" fill="#f6a33a" stroke="none" style="stroke:none"/>
-            <circle cx="178" cy="162" r="2.5" fill="#f6a33a" stroke="none" style="stroke:none"/>
             <!-- pookkalam at the entrance -->
             <ellipse cx="160" cy="186" rx="22" ry="5" fill="#f2a33a" opacity=".55" stroke="none" style="stroke:none"/>
             <ellipse cx="160" cy="186" rx="12" ry="2.8" fill="var(--maroon-soft)" opacity=".6" stroke="none" style="stroke:none"/>
@@ -294,7 +287,7 @@ body{overflow-x:hidden}
           </svg>
           <div class="location-title">PCR Bank Auditorium</div>
           <div class="venue-sub">Dharmashala, NH 66<br>Kannur · Kerala</div>
-          <div class="location-note">We'll light the lamps and string the jasmine. All we need now is you.</div>
+          <div class="location-note">We'll string the lights and the jasmine. All we need now is you.</div>
           <a class="map-btn" href="https://maps.app.goo.gl/8HVjMUzHRXcdHvLg8" target="_blank" rel="noopener">OPEN IN GOOGLE MAPS</a>
         </div>
         <div class="ornament">❦</div>
@@ -325,7 +318,7 @@ body{overflow-x:hidden}
     <section class="page" data-page="5">
       <div class="petals"></div>
       <div class="page-inner">
-        <svg class="lamp" viewBox="0 0 120 210" aria-hidden="true" style="width:84px"><use href="#nilavilakku"/></svg>
+        <svg class="rings" viewBox="0 0 160 130" aria-hidden="true" style="width:120px"><use href="#rings"/></svg>
         <div class="kicker">With Gratitude</div>
         <div class="title">Thank You</div>
         <div class="ornament">✦ ♡ ✦</div>
